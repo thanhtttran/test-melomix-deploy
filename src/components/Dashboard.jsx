@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { callSpotifyAPI } from "../../server/api/spotifyAPI";
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import './Dashboard.css'; // Import your custom styles
+import SongPlayer from './SongPlayer';
 
 export default function Dashboard() {
   const [search, setSearch] = useState("");
@@ -161,16 +162,7 @@ export default function Dashboard() {
             </button>)}
           {/* Spotify Iframe */}
           {selectedTrack && (
-            <iframe
-              src={`https://open.spotify.com/embed/track/${selectedTrack.id}`}
-              width="300"
-              height="80"
-              frameBorder="0"
-              allowtransparency="true"
-              allow="encrypted-media"
-              title={`spotify-${selectedTrack.id}`}
-              autoPlay
-            ></iframe>
+            <SongPlayer accessToken={accessToken} trackUri={selectedTrack?.uri}/>
           )}
 
 

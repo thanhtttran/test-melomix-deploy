@@ -7,7 +7,6 @@ export default function SongPlayer({accessToken, trackUri}) {
     setPlay(true)
   },[trackUri])
 
-  const uriTest = ['spotify:track:07UFnnK3uPIuKv5Rs9TmXl', 'spotify:track:3ZhTT6yjZwpPph5MIJ53XY', 'spotify:track:4YKAOXyqkKZ5gOZR0AmVMN']
   if(!accessToken){
     return null
   } 

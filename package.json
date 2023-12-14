@@ -13,7 +13,8 @@
     "buildT": "react-scripts build",
     "devStart": "nodemon server.js",
     "eject": "react-scripts eject",
-    "watch-css": "postcss src/styles.css -o src/index.css"
+    "watch-css": "postcss src/styles.css -o src/index.css",
+    "test-dashboard": "mocha src/unit_testing/Dashboard.test.js --timeout 7000"
   },
   "keywords": [],
   "author": "Brian Holt",
