@@ -6,10 +6,11 @@ import './Dashboard.css'; // Import your custom styles
 import SongPlayer from './SongPlayer';
 
 export default function Dashboard() {
+  const ACCESS_TOKEN = "BQB1N_uU56XbupHSsDCtHAvMZ7aay_4pZ73ehoHh_vFdFAI3TNYcSqwSMT7zAIbAWuPuGrAt4y96qArA58gEz4oXYZFaFgqeY9SqeQb0KJd2NKWSsLiBDXUbx_UbeGdhm3L7qcbDda2qac1M1s8ZlUqJOOMIEHDGZGeT0aE9XQu3fhIuZi6ZZuEFl9M8oxomqmqRAQ"
   const [search, setSearch] = useState("");
   const [trackArray, setTrackArray] = useState([]);
   const [selectedTrack, setSelectedTrack] = useState(null);
-
+  const [accessToken, setAccessToken] = useState('')
 
   //constant to keep track of lyrics card visibility===============================================================
   const [showLyricsCard, setShowLyricsCard] = useState(false);
@@ -65,6 +66,7 @@ export default function Dashboard() {
         const tracksResponse = await callSpotifyAPI(search);
         let tracks = tracksResponse.tracks.items;
         setTrackArray(tracks);
+        setAccessToken(ACCESS_TOKEN)
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -164,8 +166,7 @@ export default function Dashboard() {
           {selectedTrack && (
             <SongPlayer accessToken={accessToken} trackUri={selectedTrack?.uri}/>
           )}
-
-
+          
         </div>
       </div>
     </div>
