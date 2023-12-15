@@ -7,6 +7,7 @@ import SongPlayer from './SongPlayer';
 
 export default function Dashboard() {
   const ACCESS_TOKEN = import.meta.env.VITE_ACCESS_TOKEN;
+  const [search, setSearch] = useState("");
   const [trackArray, setTrackArray] = useState([]);
   const [selectedTrack, setSelectedTrack] = useState(null);
   const [accessToken, setAccessToken] = useState('')
