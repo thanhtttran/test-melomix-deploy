@@ -6,7 +6,7 @@ import './Dashboard.css'; // Import your custom styles
 import SongPlayer from './SongPlayer';
 
 export default function Dashboard() {
-  const ACCESS_TOKEN = "BQB1N_uU56XbupHSsDCtHAvMZ7aay_4pZ73ehoHh_vFdFAI3TNYcSqwSMT7zAIbAWuPuGrAt4y96qArA58gEz4oXYZFaFgqeY9SqeQb0KJd2NKWSsLiBDXUbx_UbeGdhm3L7qcbDda2qac1M1s8ZlUqJOOMIEHDGZGeT0aE9XQu3fhIuZi6ZZuEFl9M8oxomqmqRAQ"
+  const ACCESS_TOKEN = "BQDIL0RF5kgz73Jt3OWEg1Ax9MfogOsSHk07-1byO4ZeXYUHUOxa24C9lOo8bN9R44b329CiGg6CdiZnHHcVi5NPIUGDWCB7YXyOhG8KU-bcvMH_4yFe89dtg9SSTHAF7aK3VHU13dPeM690qbxR2Jpy6dX7fDA-s9PeZKQY5Zof0JaFOVhFL2B8L5OnSJstG4XBtg"
   const [search, setSearch] = useState("");
   const [trackArray, setTrackArray] = useState([]);
   const [selectedTrack, setSelectedTrack] = useState(null);
